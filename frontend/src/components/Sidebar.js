@@ -18,7 +18,6 @@ const Sidebar = () => {
             </ul>
             <div className="mt-6">
                 <h3 className="text-lg text-gray-400 font-semibold mb-6 ">Popular Posts</h3>
-                {/* You can dynamically load popular posts or add static links here */}
                 <p className="text-black">Stay connected !</p>
             </div>
         </div>
