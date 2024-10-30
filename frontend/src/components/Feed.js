@@ -1,12 +1,12 @@
 import React from 'react';
-import Post from './Post'; // Assuming you have a Post component for displaying individual posts
+import Post from './Post'; 
 
 const Feed = ({ posts, onUpvote, onDownVote }) => {
     return (
         <div>
             {posts.map((post) => (
                 <Post
-                    key={post._id} // Ensure you're using the correct unique identifier
+                    key={post._id} 
                     post={post}
                     onUpvote={onUpvote}
                     onDownvote={onDownVote}
