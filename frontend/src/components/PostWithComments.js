@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-// Inside your post component
 const PostWithComments = ({ post }) => {
     return (
         <div>
