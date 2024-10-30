@@ -33,7 +33,6 @@
                         </button>
                         <span className="text-gray-700 mx-2">{post.downvotes.length}</span>
                     </div>
-                    {/* Add Comment Button */}
                     <div className="flex items-center ml-4">
                         <button className="flex items-center text-gray-500 hover:text-blue-500 rounded-full transition" onClick={() => {navigate('/comments/:postId')}}>
                             <FaComment />
