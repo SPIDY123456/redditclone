@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/comment'; 
-// Retrieve token from localStorage
+const API_URL = 'https://redditclone-ijh8.onrender.com/api/comment'; 
+
 const getToken = () => localStorage.getItem('token');
 
 
 const postId = `6721abe64a0fb5725c5d66e3`;
 
 
-// Axios instance with token-based Authorization for requests that require it
+
 const apiWithAuth = axios.create({
     baseURL: API_URL,
     headers: {
@@ -79,7 +79,7 @@ export const upvoteComment = async (commentId) => {
     }
 };
 
-// Downvote a specific comment (requires auth)
+
 export const downvoteComment = async (commentId) => {
     try {
         const response = await apiWithAuth.post(`/${commentId}/downvote`);
