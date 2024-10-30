@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/post'; // Adjust baseURL to /posts if needed
+const API_URL = 'https://redditclone-ijh8.onrender.com/api/post'; 
 
-// Retrieve token from localStorage
+
 const getToken = () => localStorage.getItem('token');
 
-// Axios instance with token-based Authorization for requests that require it
+
 const apiWithAuth = axios.create({
     baseURL: API_URL,
     headers: {
@@ -16,14 +16,14 @@ const apiWithAuth = axios.create({
 apiWithAuth.interceptors.request.use((config) => {
     const token = getToken();
     if (token) {
-        config.headers.Authorization = `Bearer ${token}`; // Add token if available
+        config.headers.Authorization = `Bearer ${token}`; 
     }
     return config;
 }, (error) => {
     return Promise.reject(error);
 });
 
-// Fetch all posts (no auth)
+
 export const getPosts = async () => {
     try {
         const response = await axios.get(`${API_URL}`);
