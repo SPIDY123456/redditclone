@@ -10,9 +10,9 @@ import CommentPage from "./pages/CommentPage";
 import Profile from './pages/Profile';
 
 const App = () => {
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
-  // Check if the current path is not the login path
+  
   const showNavbarAndSidebar = location.pathname !== '/login';
 
   return (
